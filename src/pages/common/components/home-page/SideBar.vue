@@ -1,6 +1,6 @@
 <template>
     <aside class="sidebar">
-        <div class="icon-container" title="Search">
+        <div class="icon-container" title="Search" @click="$emit('toggle-booking-panel')">
             <font-awesome-icon :icon="['fas', 'ellipsis-h']" />
         </div>
     </aside>

@@ -3,14 +3,14 @@
         <TopBar />
 
         <div class="main-layout">
-            <Sidebar />
+            <Sidebar @toggle-booking-panel="showMenu = !showMenu" />
 
             <div class="main-content">
                 <Header />
+                <Menu v-if="showMenu" />
 
                 <div class="page-body">
-                    <h2>Welcome to A.L.O Hotel</h2>
-                    <p>This is the homepage content area.</p>
+                    <MainContent />
                 </div>
 
                 <Footer />
@@ -24,6 +24,8 @@ import TopBar from './TopBar.vue'
 import Sidebar from './SideBar.vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
+import Menu from './Menu.vue'
+import MainContent from './MainContent.vue'
 
 export default {
     name: 'HomePage',
@@ -31,7 +33,14 @@ export default {
         TopBar,
         Sidebar,
         Header,
-        Footer
+        Footer,
+        Menu,
+        MainContent
+    },
+    data() {
+        return {
+            showMenu: false
+        }
     }
 }
 </script>
@@ -62,6 +71,7 @@ export default {
 
 .page-body {
     flex: 1;
-    padding: 20px;
+    padding: 5px;
+    margin-left: 3%;
 }
 </style>

@@ -10,9 +10,9 @@
 
             <div class="col-3 d-flex align-items-center">
                 <div class="search-section w-100 d-flex align-items-center gap-2">
-                    <multiselect v-model="selectedOption" :options="options" placeholder="Select type's room"
+                    <multiselect v-model="selectedOption" :options="options" placeholder="Select location"
                         class="multiselect w-50" />
-                    <input type="text" placeholder="Search room..." class="form-control w-50" />
+                    <input type="text" placeholder="Search hotel/room..." class="form-control w-50" />
                 </div>
             </div>
 
